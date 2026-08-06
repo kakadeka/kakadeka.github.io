@@ -202,7 +202,6 @@
       if (pack[k] != null) el.textContent = pack[k];
     });
     if (label) label.textContent = lang === "zh" ? "EN" : "中文";
-    // Logo stays WebLogoCN20260806.png in both languages.
   }
 
   toggle?.addEventListener("click", () => apply(lang === "zh" ? "en" : "zh"));
