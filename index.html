@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="KakadekaToolBox — offline Windows document toolbox." />
+  <title>KakadekaToolBox</title>
+  <link rel="icon" href="WebLogoCN20260806.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.2.5/400.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.2.5/500.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.2.5/600.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.2.5/700.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="nav-wrap">
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="KakadekaToolBox">
+        <img class="brand-logo" src="WebLogoCN20260806.png" alt="KakadekaToolBox" width="168" height="36" />
+      </a>
+      <nav class="nav-links">
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#privacy" data-i18n="nav.privacy">Local-first</a>
+        <a href="#tools" data-i18n="nav.tools">Tools</a>
+        <a href="#download" data-i18n="nav.download">Download</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" id="langToggle" aria-label="Language">
+          <span data-lang-label>中文</span>
+        </button>
+        <a class="icon-btn gh" href="https://github.com/kakadeka/KakadekaToolBox" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+        <a class="btn btn-grad btn-sm" href="https://github.com/kakadeka/KakadekaToolBox/releases/download/v1.0.3/KakadekaToolBox_1.0.3_x64-setup.exe" data-i18n="nav.cta">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="badge">
+        <span class="badge-ver">v1.0.3</span>
+        <span data-i18n="hero.badge">Free · open source · local-first</span>
+      </div>
+      <h1>
+        <span data-i18n="hero.line1">Convert documents.</span><br />
+        <span class="grad-text" data-i18n="hero.line2">Keep files local.</span>
+      </h1>
+      <p class="lede" data-i18n="hero.lede">Turn PDFs, scans, and images into Word. Merge, split, and compress PDFs too. Offline by default—no telemetry.</p>
+      <div class="cta-row">
+        <a class="btn btn-grad btn-lg" href="https://github.com/kakadeka/KakadekaToolBox/releases/download/v1.0.3/KakadekaToolBox_1.0.3_x64-setup.exe">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 12l-4-4h2.5V2h3v6H12L8 12zm-6 2h12v2H2v-2z"/></svg>
+          <span data-i18n="hero.download">Download for free</span>
+        </a>
+        <a class="btn btn-ghost btn-lg" href="https://github.com/kakadeka/KakadekaToolBox" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <span data-i18n="hero.github">View source</span>
+        </a>
+      </div>
+      <ul class="checks">
+        <li data-i18n="hero.c1">Windows 10/11</li>
+        <li data-i18n="hero.c2">Offline by default</li>
+        <li data-i18n="hero.c3">AGPL-3.0</li>
+      </ul>
+
+      <div class="preview">
+        <div class="preview-chrome">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="preview-title" data-i18n="preview.title">Local convert · no upload</span>
+        </div>
+        <div class="preview-body">
+          <aside class="preview-side">
+            <p class="side-label" data-i18n="preview.side">Features</p>
+            <button type="button" class="side-item active" data-i18n="preview.i1">Scan PDF → Word</button>
+            <button type="button" class="side-item" data-i18n="preview.i2">Text PDF → Word</button>
+            <button type="button" class="side-item" data-i18n="preview.i3">Image → Word</button>
+            <button type="button" class="side-item" data-i18n="preview.i4">PDF tools</button>
+          </aside>
+          <div class="preview-doc">
+            <p class="doc-kicker" data-i18n="preview.docKicker">Local job</p>
+            <h2 data-i18n="preview.docTitle">scan_contract.pdf</h2>
+            <p data-i18n="preview.docBody">Run offline OCR on this machine, keep paragraphs and tables where possible, and export editable Word. Files never leave your PC.</p>
+            <div class="flow">
+              <div class="flow-card">
+                <span>IN</span>
+                <strong>scan.pdf</strong>
+              </div>
+              <div class="flow-arrow" aria-hidden="true">→</div>
+              <div class="flow-card out">
+                <span>OUT</span>
+                <strong>scan.docx</strong>
+              </div>
+            </div>
+            <ul class="doc-list">
+              <li data-i18n="preview.s1">Offline OCR</li>
+              <li data-i18n="preview.s2">Layout recovery</li>
+              <li data-i18n="preview.s3">Save locally</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><b data-i18n="stats.s1v">Local</b><span data-i18n="stats.s1l">Offline by default</span></div>
+      <div><b data-i18n="stats.s2v">OCR</b><span data-i18n="stats.s2l">Scans to Word</span></div>
+      <div><b data-i18n="stats.s3v">PDF</b><span data-i18n="stats.s3l">Merge · split · compress</span></div>
+      <div><b data-i18n="stats.s4v">Open</b><span data-i18n="stats.s4l">Auditable source</span></div>
+    </section>
+
+    <section class="section" id="features">
+      <p class="eyebrow" data-i18n="feat.eyebrow">Capabilities</p>
+      <h2 data-i18n="feat.title">Results stay on your PC—no upload first.</h2>
+      <p class="section-lede" data-i18n="feat.lede">Built for convert, OCR, and PDF cleanup. Ready to use after install.</p>
+      <div class="trio">
+        <article>
+          <h3 data-i18n="feat.c1t">Digital PDF → Word</h3>
+          <p data-i18n="feat.c1d">Convert text-based PDFs to editable Word locally—ideal for reports and everyday files.</p>
+        </article>
+        <article>
+          <h3 data-i18n="feat.c2t">Scanned PDF / image → Word</h3>
+          <p data-i18n="feat.c2d">Offline OCR for scans and photos, so you type less.</p>
+        </article>
+        <article>
+          <h3 data-i18n="feat.c3t">PDF utilities</h3>
+          <p data-i18n="feat.c3d">Merge, split, rotate, and compress in one desktop app.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="tools">
+      <p class="eyebrow" data-i18n="tools.eyebrow">Toolbox</p>
+      <h2 data-i18n="tools.title">Everyday document tools, in one place.</h2>
+      <p class="section-lede" data-i18n="tools.lede">One desktop entry for convert and cleanup—less hopping between websites.</p>
+      <div class="grid6">
+        <article>
+          <h3 data-i18n="tools.t1">PDF → Word</h3>
+          <p data-i18n="tools.d1">Local text PDF convert</p>
+        </article>
+        <article>
+          <h3 data-i18n="tools.t2">Scan → Word</h3>
+          <p data-i18n="tools.d2">Offline OCR</p>
+        </article>
+        <article>
+          <h3 data-i18n="tools.t3">Image → Word</h3>
+          <p data-i18n="tools.d3">Photo recognition</p>
+        </article>
+        <article>
+          <h3 data-i18n="tools.t4">Word → PDF</h3>
+          <p data-i18n="tools.d4">Needs LibreOffice</p>
+        </article>
+        <article>
+          <h3 data-i18n="tools.t5">PDF cleanup</h3>
+          <p data-i18n="tools.d5">Merge, split, rotate, compress</p>
+        </article>
+        <article>
+          <h3 data-i18n="tools.t6">Office → MD</h3>
+          <p data-i18n="tools.d6">Optional Markdown export</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="privacy">
+      <div class="split">
+        <div>
+          <p class="eyebrow" data-i18n="why.eyebrow">Why local</p>
+          <h2 data-i18n="why.title">Less uploading. More control.</h2>
+          <p class="section-lede" data-i18n="why.lede">Contracts, scans, and internal docs shouldn’t go to online converters lightly.</p>
+        </div>
+        <div class="stack">
+          <article>
+            <h3 data-i18n="why.c1t">Files stay local</h3>
+            <p data-i18n="why.c1d">Offline by default: no document uploads, no telemetry.</p>
+          </article>
+          <article>
+            <h3 data-i18n="why.c2t">Ready after install</h3>
+            <p data-i18n="why.c2d">The official installer bundles the conversion runtime for core features.</p>
+          </article>
+          <article>
+            <h3 data-i18n="why.c3t">Open and auditable</h3>
+            <p data-i18n="why.c3d">Source is on GitHub. The conversion engine is AGPL-3.0—review and give feedback.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section download" id="download">
+      <div class="download-panel">
+        <p class="eyebrow" data-i18n="dl.eyebrow">Get started</p>
+        <h2 data-i18n="dl.title">Download the installer and start.</h2>
+        <p class="section-lede" data-i18n="dl.lede">One setup file. No account, no subscription. Windows 10/11 x64.</p>
+        <a class="btn btn-grad btn-lg" href="https://github.com/kakadeka/KakadekaToolBox/releases/download/v1.0.3/KakadekaToolBox_1.0.3_x64-setup.exe">
+          <span data-i18n="dl.cta">Download KakadekaToolBox 1.0.3</span>
+        </a>
+        <a class="dl-link" href="https://github.com/kakadeka/KakadekaToolBox/releases/tag/v1.0.3" target="_blank" rel="noopener" data-i18n="dl.notes">Release notes →</a>
+        <p class="fine" data-i18n="dl.note">OCR and complex layouts depend on open engines—verify on your machine. Word→PDF needs LibreOffice installed separately.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <div class="foot-brand">
+        <img class="foot-logo" src="WebLogoCN20260806.png" alt="KakadekaToolBox" width="168" height="36" />
+        <p data-i18n="footer.tag">Local document toolbox · open source</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5 data-i18n="footer.product">Product</h5>
+          <a href="#features" data-i18n="nav.features">Features</a>
+          <a href="#download" data-i18n="nav.download">Download</a>
+        </div>
+        <div>
+          <h5 data-i18n="footer.resources">Resources</h5>
+          <a href="https://github.com/kakadeka/KakadekaToolBox" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/kakadeka/KakadekaToolBox/releases" target="_blank" rel="noopener">Releases</a>
+        </div>
+        <div>
+          <h5 data-i18n="footer.license">License</h5>
+          <a href="https://github.com/kakadeka/KakadekaToolBox/blob/main/LICENSE" target="_blank" rel="noopener">AGPL-3.0</a>
+        </div>
+      </div>
+    </div>
+    <p class="copy" data-i18n="footer.copy">© Kakadeka. Provided as is.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
